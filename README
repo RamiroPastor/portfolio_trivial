@@ -1,0 +1,3 @@
+game of questions coded with vanilla js
+
+calls external api to fetch questions and answers: https://opentdb.com/api.php?type=multiple

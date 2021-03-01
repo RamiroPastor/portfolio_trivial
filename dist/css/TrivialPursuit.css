@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Balmoral;
+  src: url(../../assets/fonts/BalmoralStd.otf) format("opentype");
+}
+
+@keyframes rollingBackground {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 2000rem 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.5rem;
+  color: #232323;
+  background-color: lavender;
+  background-image: url("../../assets/img/trivialMosaic.svg");
+  background-size: 40px 80px;
+  background-repeat: repeat;
+  animation: rollingBackground 1000s linear 0s infinite;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  background-color: #232323;
+}
+
+.header .logo {
+  width: 50vw;
+}
+
+.gameConfig {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  background-color: white;
+  border: 2px solid indigo;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px 6px rgba(50, 50, 50, 0.75);
+  width: 50rem;
+}
+
+.gameConfig h1 {
+  font-family: "Balmoral";
+  font-size: 6rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.gameConfig label {
+  margin-bottom: 2.5rem;
+}
+
+.gameConfig p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.gameConfig em {
+  color: red;
+  font-size: 1rem;
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.gameConfig input,
+.gameConfig select {
+  width: 10rem;
+  padding: 0.4rem;
+  border: 1px solid black;
+}
+
+.gameConfig input:focus,
+.gameConfig select:focus {
+  border-color: indigo;
+}
+
+.gameConfig input[type="submit"],
+.gameConfig select[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 500;
+  background: #4cae43;
+  background: linear-gradient(90deg, #4cae43 3%, #ffde00 20%, #f89829 40%, #d80c8c 60%, #0397d6 80%, #883f98 97%);
+  color: white;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+  transition: all 0.5s linear 0s;
+}
+
+.gameConfig input[type="submit"]:hover,
+.gameConfig select[type="submit"]:hover {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0px 9px 9px 7px rgba(50, 50, 50, 0.8);
+}
+
+.gameBoard {
+  margin-top: 3rem;
+}
+
+.gameBoard fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  background-color: white;
+  border: 2px solid indigo;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px 6px rgba(50, 50, 50, 0.75);
+  width: 90rem;
+  max-width: 90rem;
+}
+
+.gameBoard fieldset legend {
+  padding: 0.5rem 1rem;
+  border: 2px solid indigo;
+  border-radius: 50px;
+  background-color: thistle;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.gameBoard fieldset p {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.gameBoard fieldset p em {
+  text-decoration: underline;
+}
+
+.gameBoard fieldset p span {
+  padding: 0.6rem 1.2rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  background: indigo;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.gameBoard fieldset p span::after {
+  content: " →";
+}
+
+.gameBoard fieldset label {
+  margin-bottom: 2rem;
+}
+
+.gameBoard div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gameBoard input {
+  cursor: pointer;
+  width: 40rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border: 1px solid indigo;
+  border-radius: 500px;
+  font-weight: 500;
+  background-color: #c8c8c8;
+}
+
+.gameBoard input:hover {
+  background-color: #e1e1e1;
+}
+
+.solveGameButton {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 500;
+  background: #4cae43;
+  background: linear-gradient(90deg, #4cae43 3%, #ffde00 20%, #f89829 40%, #d80c8c 60%, #0397d6 80%, #883f98 97%);
+  color: white;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
+  transition: all 0.5s linear 0s;
+  opacity: 1;
+}
+
+.solveGameButton:hover {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0px 9px 9px 7px rgba(50, 50, 50, 0.8);
+}
+
+.selectedAnswer {
+  background-color: gold !important;
+}
+
+.correctAnswer {
+  background-color: lime !important;
+}
+
+.incorrectAnswer {
+  background-color: red !important;
+}
+
+.gameResults {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  background-color: white;
+  border: 2px solid indigo;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px 6px rgba(50, 50, 50, 0.75);
+  margin-top: 3rem;
+}
+
+.gameResults h3 {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #232323;
+  text-transform: uppercase;
+}
+
+.gameResults p {
+  margin-top: 1.5rem;
+}
+
+.gameResults strong {
+  margin-left: 2rem;
+}
+
+.gameResults img {
+  width: 1.5rem;
+}
+
+.gameResults a {
+  display: inline;
+  align-self: center;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid teal;
+  border-radius: 20px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #005a5a;
+  background-color: #96ff96;
+}
+
+.gameResults a:hover {
+  background: #b4ffb4;
+}
+/*# sourceMappingURL=TrivialPursuit.css.map */
