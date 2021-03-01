@@ -20,7 +20,7 @@ compileSvg =
     mapM_ f allSvg
   where
     f (fileName , svgCode) =
-      writeFile ("../assets/img/" ++ fileName) (renderSvg $ docTypeSvg svgCode)
+      writeFile ("../assets/img/" ++ fileName) (renderSvg svgCode)
 
 
 allSvg :: [ (FilePath , Svg) ]
@@ -32,7 +32,7 @@ allSvg =
 
 trivialGamePiece :: Svg
 trivialGamePiece =
-  svg
+  docTypeSvg
     ! A.viewbox "0 0 1 2"
     ! A.preserveaspectratio "xMinYMin meet"
     ! A.stroke "rgb(35,35,35)"

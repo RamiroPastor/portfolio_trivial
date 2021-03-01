@@ -5,10 +5,28 @@
 
 @keyframes rollingBackground {
   from {
-    background-position: 0 50%;
+    background-position: 0 0;
   }
   to {
-    background-position: 2000rem 50%;
+    background-position: 2000rem 2000rem;
+  }
+}
+
+@mixin landscape {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 786px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
   }
 }
 
@@ -34,6 +52,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding-bottom: 5rem;
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 1.5rem;
@@ -93,7 +112,7 @@ body {
 // ----------------------------------------------------------------------
 
 .header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
@@ -105,7 +124,8 @@ body {
 
 .gameConfig {
   @include bigContainer();
-  width: 50rem;
+  width: 80vw;
+  max-width: 50rem;
   h1 {
     font-family: "Balmoral";
     font-size: 6rem;
@@ -144,7 +164,7 @@ body {
   margin-top: 3rem;
   fieldset {
     @include bigContainer();
-    width: 90rem;
+    width: 90vw;
     max-width: 90rem;
     legend {
       padding: 0.5rem 1rem;
@@ -180,12 +200,18 @@ body {
   }
   div {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    @include desktop {
+      flex-direction: row;
+    }
   }
   input {
     cursor: pointer;
-    width: 40rem;
+    width: 70vw;
+    max-width: 40rem;
     margin-top: 1rem;
     padding: 0.7rem;
     border: 1px solid indigo;
