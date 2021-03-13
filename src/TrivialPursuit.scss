@@ -244,6 +244,7 @@ body {
 .gameResults {
   @include bigContainer();
   margin-top: 3rem;
+  font-family: "Times New Roman", Times, serif;
   h3 {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgb(35, 35, 35);

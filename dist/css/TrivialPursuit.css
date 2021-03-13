@@ -265,6 +265,7 @@ body {
   border-radius: 12px;
   box-shadow: 0px 8px 15px 6px rgba(50, 50, 50, 0.75);
   margin-top: 3rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .gameResults h3 {
