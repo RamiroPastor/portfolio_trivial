@@ -3,14 +3,14 @@
   src: url(../../assets/fonts/BalmoralStd.otf) format("opentype");
 }
 
-@keyframes rollingBackground {
+/* @keyframes rollingBackground {
   from {
     background-position: 0 0;
   }
   to {
     background-position: 2000rem 2000rem;
   }
-}
+} */
 
 @mixin landscape {
   @media only screen and (min-width: 576px) {
@@ -61,7 +61,7 @@ body {
   background-image: url("../../assets/img/trivialMosaic.svg");
   background-size: 40px 80px;
   background-repeat: repeat;
-  animation: rollingBackground 1000s linear 0s infinite;
+  // animation: rollingBackground 1000s linear 0s infinite;
 }
 
 .displayNone {
